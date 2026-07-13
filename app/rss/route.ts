@@ -5,12 +5,7 @@ export async function GET() {
   let allBlogs = await getBlogPosts()
 
   const itemsXml = allBlogs
-    .sort((a, b) => {
-      if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
-        return -1
-      }
-      return 1
-    })
+    .sort((a, b) => a.metadata.title.localeCompare(b.metadata.title))
     .map(
       (post) =>
         `<item>
