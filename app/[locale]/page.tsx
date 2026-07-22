@@ -1,4 +1,3 @@
-import { BlogPosts } from '../components/posts'
 import { Projects } from '../components/projects'
 
 export default async function Page({ params }) {
@@ -17,9 +16,6 @@ export default async function Page({ params }) {
       </p>
       <div className="my-8">
         <Projects />
-      </div>
-      <div className="my-8">
-        <BlogPosts locale={locale} />
       </div>
     </section>
   )
