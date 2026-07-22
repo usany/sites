@@ -38,7 +38,7 @@ export function Navbar() {
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
         <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+          className="flex flex-row items-center justify-between relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"
         >
           <div className="flex flex-row space-x-0 pr-10">
@@ -54,22 +54,22 @@ export function Navbar() {
               );
             })}
           </div>
+          <div className="flex flex-row items-center gap-2">
+            {GitHubLink.href && (
+              <Link
+                href={GitHubLink.href}
+                className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 p-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View the repository on GitHub"
+                aria-label="View the repository on GitHub"
+              >
+                <FiGithub className="w-5 h-5" />
+              </Link>
+            )}
+            <ModeToggle />
+          </div>
         </nav>
-      </div>
-      <div className="flex flex-row items-center gap-2">
-        {GitHubLink.href && (
-          <Link
-            href={GitHubLink.href}
-            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 p-2"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="View the repository on GitHub"
-            aria-label="View the repository on GitHub"
-          >
-            <FiGithub className="w-5 h-5" />
-          </Link>
-        )}
-        <ModeToggle />
       </div>
     </aside>
   );
