@@ -26,9 +26,13 @@ export function LanguageDropdown() {
       setCurrentLanguage(pathLang as keyof typeof languages);
     } else {
       // Fallback to stored value or default
-      const stored = localStorage.getItem("language") as keyof typeof languages | null;
-      if (stored && stored in languages) {
-        setCurrentLanguage(stored);
+      try {
+        const stored = localStorage.getItem("language") as keyof typeof languages | null;
+        if (stored && stored in languages) {
+          setCurrentLanguage(stored);
+        }
+      } catch {
+        // localStorage unavailable (private mode, storage disabled, etc.)
       }
     }
   }, [pathname]);
@@ -52,7 +56,19 @@ export function LanguageDropdown() {
   }, [isOpen]);
 
   const handleLanguageChange = (lang: keyof typeof languages) => {
-    localStorage.setItem("language", lang);
+    try {
+      localStorage.setItem("language", lang);
+    } catch {
+      // localStorage unavailable (private mode, storage disabled, etc.)
+    }
+
+    try {
+      // Save to cookie for server-side rendering
+      document.cookie = `language=${lang}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
+    } catch {
+      // Cookie setting unavailable
+    }
+
     setCurrentLanguage(lang);
     setIsOpen(false);
 
