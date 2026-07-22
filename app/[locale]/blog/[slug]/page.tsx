@@ -87,6 +87,14 @@ export default async function Blog({ params }) {
           }),
         }}
       />
+      <div className="mb-8">
+        <a
+          href={`/${locale}/blog`}
+          className="inline-block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+        >
+          ← Back to posts
+        </a>
+      </div>
       <h1 className="title font-semibold text-2xl tracking-tighter">
         {post.metadata.title}
       </h1>
