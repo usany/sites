@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FiGithub } from "react-icons/fi";
 import { GitHubLink } from "settings/navigation";
 import { ThemeDropdown } from "./theme-dropdown";
+import { LanguageDropdown } from "./language-dropdown";
 
 const navItems = {
   "/": {
@@ -48,6 +49,7 @@ export function Navbar() {
                 <FiGithub className="w-5 h-5" />
               </Link>
             )}
+            <LanguageDropdown />
             <ThemeDropdown />
           </div>
         </nav>
