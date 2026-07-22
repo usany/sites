@@ -1,4 +1,5 @@
 import { BlogPosts } from '../components/posts'
+import { Projects } from '../components/projects'
 
 export default async function Page({ params }) {
   const { locale } = await params
@@ -14,6 +15,9 @@ export default async function Page({ params }) {
         early error detection ensures cleaner code, and my preference for dark
         mode, which eases long coding sessions by reducing eye strain.`}
       </p>
+      <div className="my-8">
+        <Projects />
+      </div>
       <div className="my-8">
         <BlogPosts locale={locale} />
       </div>
