@@ -1,4 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { FiGithub, FiMoon, FiSun } from "react-icons/fi";
+import { useTheme } from "next-themes";
+import { GitHubLink } from "settings/navigation";
 
 const navItems = {
   "/": {
@@ -8,6 +13,25 @@ const navItems = {
     name: "blog",
   },
 };
+
+function ModeToggle() {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 p-2"
+      title="Toggle dark mode"
+      aria-label="Toggle dark mode"
+    >
+      {theme === "dark" ? (
+        <FiSun className="w-5 h-5" />
+      ) : (
+        <FiMoon className="w-5 h-5" />
+      )}
+    </button>
+  );
+}
 
 export function Navbar() {
   return (
@@ -31,6 +55,21 @@ export function Navbar() {
             })}
           </div>
         </nav>
+      </div>
+      <div className="flex flex-row items-center gap-2">
+        {GitHubLink.href && (
+          <Link
+            href={GitHubLink.href}
+            className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 p-2"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View the repository on GitHub"
+            aria-label="View the repository on GitHub"
+          >
+            <FiGithub className="w-5 h-5" />
+          </Link>
+        )}
+        <ModeToggle />
       </div>
     </aside>
   );
