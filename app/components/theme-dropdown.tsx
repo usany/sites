@@ -49,14 +49,11 @@ export function ThemeDropdown() {
       <button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-2 py-1 text-sm border border-neutral-200 dark:border-neutral-800 rounded-md transition-all hover:bg-neutral-100 dark:hover:bg-neutral-900"
+        className="flex items-center gap-2 px-2 py-1 text-sm transition-all hover:text-neutral-800 dark:hover:text-neutral-200"
         aria-label="Toggle theme menu"
         aria-expanded={isOpen}
       >
         <CurrentIcon className="w-4 h-4" />
-        <span className="text-neutral-900 dark:text-neutral-100">
-          {themeConfig[currentTheme]?.name || "Theme"}
-        </span>
       </button>
 
       {isOpen && (
@@ -95,7 +92,7 @@ export function ThemeDropdown() {
                   )}
                 </button>
               );
-            }
+            },
           )}
         </div>
       )}
