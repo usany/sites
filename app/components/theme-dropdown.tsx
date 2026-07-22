@@ -59,7 +59,7 @@ export function ThemeDropdown() {
       {isOpen && (
         <div
           ref={menuRef}
-          className="absolute right-0 mt-2 w-40 border border-neutral-200 dark:border-neutral-800 rounded-md bg-white dark:bg-neutral-950 shadow-lg z-50"
+          className="absolute right-0 mt-2 w-40 rounded-md bg-white dark:bg-neutral-900 shadow-lg z-50"
         >
           {(["system", "light", "dark"] as Array<keyof typeof themeConfig>).map(
             (t) => {
@@ -77,10 +77,6 @@ export function ThemeDropdown() {
                     isActive
                       ? "bg-neutral-100 dark:bg-neutral-800 font-medium"
                       : "hover:bg-neutral-50 dark:hover:bg-neutral-900"
-                  } ${
-                    t !== "system"
-                      ? "border-neutral-200 dark:border-neutral-800"
-                      : ""
                   }`}
                 >
                   <Icon className="w-4 h-4" />
