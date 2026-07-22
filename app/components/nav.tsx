@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FiGithub, FiRss } from "react-icons/fi";
+import { FiGithub, FiRss, FiMail } from "react-icons/fi";
 import { GitHubLink } from "settings/navigation";
 import { ThemeDropdown } from "./theme-dropdown";
 import { LanguageDropdown } from "./language-dropdown";
@@ -39,6 +39,14 @@ export function Navbar({ locale = "en" }: { locale?: string }) {
             })}
           </div>
           <div className="flex flex-row items-center gap-2">
+            <Link
+              href="mailto:ahncb@khu.ac.kr"
+              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 p-2"
+              title="Send an email"
+              aria-label="Send an email"
+            >
+              <FiMail className="w-5 h-5" />
+            </Link>
             {GitHubLink.href && (
               <Link
                 href={GitHubLink.href}
