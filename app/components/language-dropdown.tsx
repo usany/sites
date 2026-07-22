@@ -6,11 +6,7 @@ import { FiGlobe } from "react-icons/fi";
 
 const languages = {
   en: { name: "English", nativeName: "English" },
-  es: { name: "Spanish", nativeName: "Español" },
-  fr: { name: "French", nativeName: "Français" },
-  de: { name: "German", nativeName: "Deutsch" },
-  ja: { name: "Japanese", nativeName: "日本語" },
-  zh: { name: "Chinese", nativeName: "中文" },
+  ko: { name: "Korean", nativeName: "한국어" },
 };
 
 export function LanguageDropdown() {
