@@ -79,7 +79,7 @@ export function ThemeDropdown() {
                       : "hover:bg-neutral-50 dark:hover:bg-neutral-900"
                   } ${
                     t !== "system"
-                      ? "border-b border-neutral-200 dark:border-neutral-800"
+                      ? "border-neutral-200 dark:border-neutral-800"
                       : ""
                   }`}
                 >
