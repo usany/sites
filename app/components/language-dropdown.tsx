@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { FiGlobe } from "react-icons/fi";
 
 const languages = {
   en: { name: "English", nativeName: "English" },
@@ -76,7 +75,7 @@ export function LanguageDropdown() {
         aria-expanded={isOpen}
         title={languages[currentLanguage].nativeName}
       >
-        <FiGlobe className="w-4 h-4" />
+        <span>{currentLanguage.toUpperCase()}</span>
       </button>
 
       {isOpen && (
