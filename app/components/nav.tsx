@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiRss } from "react-icons/fi";
 import { GitHubLink } from "settings/navigation";
 import { ThemeDropdown } from "./theme-dropdown";
 import { LanguageDropdown } from "./language-dropdown";
@@ -49,6 +49,14 @@ export function Navbar() {
                 <FiGithub className="w-5 h-5" />
               </Link>
             )}
+            <Link
+              href="/rss"
+              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 p-2"
+              title="RSS Feed"
+              aria-label="Subscribe to RSS feed"
+            >
+              <FiRss className="w-5 h-5" />
+            </Link>
             <LanguageDropdown />
             <ThemeDropdown />
           </div>
