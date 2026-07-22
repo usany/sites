@@ -1,5 +1,6 @@
-@unocss layer reset;
-@unocss layer utilities;
+@import '@unocss/reset/tailwind.css';
+@unocss preflights;
+@unocss default;
 
 ::selection {
   background-color: #47a3f3;

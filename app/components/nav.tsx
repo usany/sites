@@ -70,6 +70,7 @@ export function Navbar() {
           </Link>
         )}
         <ModeToggle />
+        <button>practice</button>
       </div>
     </aside>
   );
