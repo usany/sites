@@ -1,6 +1,7 @@
 import { BlogPosts } from '../components/posts'
 
-export default function Page() {
+export default async function Page({ params }) {
+  const { locale } = await params
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
@@ -14,7 +15,7 @@ export default function Page() {
         mode, which eases long coding sessions by reducing eye strain.`}
       </p>
       <div className="my-8">
-        <BlogPosts />
+        <BlogPosts locale={locale} />
       </div>
     </section>
   )

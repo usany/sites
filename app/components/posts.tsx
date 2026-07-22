@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { formatDate, getBlogPosts } from "app/blog/utils";
 
-export function BlogPosts({ locale = "en" }: { locale?: string }) {
+export function BlogPosts({ locale }: { locale?: string }) {
   let allBlogs = getBlogPosts(locale);
-  const resolvedLocale = locale || "en";
+  const resolvedLocale = locale;
 
   return (
     <div>
