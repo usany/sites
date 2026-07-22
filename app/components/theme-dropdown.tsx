@@ -41,7 +41,7 @@ export function ThemeDropdown() {
 
   if (!mounted) return null;
 
-  const currentTheme = (theme || "light") as keyof typeof themeConfig;
+  const currentTheme = (theme || "system") as keyof typeof themeConfig;
   const CurrentIcon = themeConfig[currentTheme]?.icon || FiSun;
 
   return (
@@ -61,7 +61,7 @@ export function ThemeDropdown() {
           ref={menuRef}
           className="absolute right-0 mt-2 w-40 border border-neutral-200 dark:border-neutral-800 rounded-md bg-white dark:bg-neutral-950 shadow-lg z-50"
         >
-          {(Object.keys(themeConfig) as Array<keyof typeof themeConfig>).map(
+          {(["system", "light", "dark"] as Array<keyof typeof themeConfig>).map(
             (t) => {
               const Icon = themeConfig[t].icon;
               const isActive = currentTheme === t;
