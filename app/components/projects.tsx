@@ -37,39 +37,42 @@ const projects: Project[] = [
 
 export function Projects() {
   return (
-    <div className="space-y-4">
+    <div className="grid gap-6">
       {projects.map((project) => (
         <div
           key={project.id}
-          className="border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors"
+          className="group relative border border-neutral-200 dark:border-neutral-700 rounded-xl p-6 bg-white dark:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-600 hover:shadow-md dark:hover:shadow-xl transition-all duration-200"
         >
-          <div className="mb-3">
-            <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-            <p className="text-neutral-700 dark:text-neutral-400 text-sm">
+          <div className="mb-4">
+            <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2 group-hover:text-neutral-700 dark:group-hover:text-neutral-50 transition-colors">
+              {project.title}
+            </h3>
+            <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
               {project.description}
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2 mb-3">
+          <div className="flex flex-wrap gap-2 mb-4">
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-block bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 px-3 py-1 rounded text-xs font-medium"
+                className="inline-flex items-center bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-3 py-1.5 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex gap-4">
             {project.link && (
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:underline"
+                className="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link"
               >
-                Visit →
+                <span>Visit</span>
+                <span className="ml-1 transform group-hover/link:translate-x-1 transition-transform">→</span>
               </a>
             )}
             {project.github && (
@@ -77,9 +80,10 @@ export function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:underline"
+                className="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link"
               >
-                GitHub →
+                <span>GitHub</span>
+                <span className="ml-1 transform group-hover/link:translate-x-1 transition-transform">→</span>
               </a>
             )}
           </div>
