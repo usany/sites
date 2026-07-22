@@ -50,7 +50,12 @@ function getMDXData(dir) {
 }
 
 export function getBlogPosts(locale: string = 'en') {
-  return getMDXData(path.join(process.cwd(), 'app', 'blog', 'posts', locale))
+  const localeDir = path.join(process.cwd(), 'app', 'blog', 'posts', locale)
+  const posts = getMDXData(localeDir)
+  if (posts.length === 0 && locale !== 'en') {
+    return getMDXData(path.join(process.cwd(), 'app', 'blog', 'posts', 'en'))
+  }
+  return posts
 }
 
 export function formatDate(date: string, includeRelative = false) {
