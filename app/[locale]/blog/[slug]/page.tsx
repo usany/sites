@@ -5,10 +5,14 @@ import { baseUrl } from '@/sitemap'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
+  const locales = ['en', 'ko']
 
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
+  return posts.flatMap((post) =>
+    locales.map((locale) => ({
+      locale,
+      slug: post.slug,
+    }))
+  )
 }
 
 export function generateMetadata({ params }) {
