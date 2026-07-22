@@ -6,7 +6,7 @@ export function BlogPosts({ locale }: { locale?: string }) {
   const resolvedLocale = locale;
 
   return (
-    <div className="grid gap-3">
+    <div className="grid gap-3 pb-8">
       {allBlogs
         .sort((a, b) => a.metadata.title.localeCompare(b.metadata.title))
         .map((post) => (
