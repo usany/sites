@@ -1,22 +1,18 @@
-import { Projects } from '../components/projects'
+import { Projects } from "../components/projects";
 
 export default async function Page({ params }) {
-  const { locale } = await params
+  const { locale } = await params;
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         My Portfolio
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {`Hi, I'm cb ahn. These are some of the projects I've worked on. You can find more on my GitHub.`}
       </p>
       <div className="my-8">
         <Projects />
       </div>
     </section>
-  )
+  );
 }
