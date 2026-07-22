@@ -19,14 +19,17 @@ export function LanguageDropdown() {
 
   useEffect(() => {
     setMounted(true);
-    // Get language from localStorage or pathname
-    const stored = localStorage.getItem("language") as keyof typeof languages | null;
+    // Get language from pathname (route takes priority)
     const pathLang = pathname.split("/")[1];
 
-    if (stored && stored in languages) {
-      setCurrentLanguage(stored);
-    } else if (pathLang && pathLang in languages) {
+    if (pathLang && pathLang in languages) {
       setCurrentLanguage(pathLang as keyof typeof languages);
+    } else {
+      // Fallback to stored value or default
+      const stored = localStorage.getItem("language") as keyof typeof languages | null;
+      if (stored && stored in languages) {
+        setCurrentLanguage(stored);
+      }
     }
   }, [pathname]);
 

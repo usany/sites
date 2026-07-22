@@ -7,15 +7,17 @@ import { ThemeDropdown } from "./theme-dropdown";
 import { LanguageDropdown } from "./language-dropdown";
 
 const navItems = {
-  "/": {
-    name: "home",
+  en: {
+    "/": { name: "home" },
+    "/blog": { name: "blog" },
   },
-  "/blog": {
-    name: "blog",
+  ko: {
+    "/": { name: "홈" },
+    "/blog": { name: "블로그" },
   },
 };
 
-export function Navbar() {
+export function Navbar({ locale = "en" }: { locale?: string }) {
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
@@ -24,11 +26,11 @@ export function Navbar() {
           id="nav"
         >
           <div className="flex flex-row space-x-0 pr-10">
-            {Object.entries(navItems).map(([path, { name }]) => {
+            {Object.entries(navItems[locale as keyof typeof navItems] || navItems.en).map(([path, { name }]) => {
               return (
                 <Link
                   key={path}
-                  href={path}
+                  href={`/${locale}${path === "/" ? "" : path}`}
                   className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
                 >
                   {name}
