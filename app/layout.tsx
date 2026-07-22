@@ -46,7 +46,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(GeistSans.variable, GeistMono.variable)}
+      className={cx(
+        GeistSans.variable,
+        GeistMono.variable,
+      )}
       suppressHydrationWarning
     >
       <head>
@@ -57,20 +60,20 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
-                  const t = localStorage.getItem('theme');
+                  const theme = localStorage.getItem('theme');
                   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  const isDark = t === 'dark' || (t === null && prefersDark);
+                  const isDark = theme === 'dark' || (theme === null && prefersDark);
                   if (isDark) {
                     document.documentElement.classList.add('dark');
                   }
-                } catch (e) {}
+                } catch(e) {}
               })()
             `,
           }}
         />
       </head>
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto text-black bg-white dark:text-white dark:bg-black">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="theme">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
             <Navbar />
             {children}
