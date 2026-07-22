@@ -59,7 +59,7 @@ export function ThemeDropdown() {
       {isOpen && (
         <div
           ref={menuRef}
-          className="absolute right-0 mt-2 w-40 rounded-md bg-white dark:bg-neutral-900 shadow-lg z-50"
+          className="absolute right-0 mt-2 w-40 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-lg z-50"
         >
           {(["system", "light", "dark"] as Array<keyof typeof themeConfig>).map(
             (t) => {
