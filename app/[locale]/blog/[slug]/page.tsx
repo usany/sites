@@ -4,19 +4,19 @@ import { formatDate, getBlogPosts } from '@/blog/utils'
 import { baseUrl } from '@/sitemap'
 
 export async function generateStaticParams() {
-  let posts = getBlogPosts()
   const locales = ['en', 'ko']
 
-  return posts.flatMap((post) =>
-    locales.map((locale) => ({
+  return locales.flatMap((locale) =>
+    getBlogPosts(locale).map((post) => ({
       locale,
       slug: post.slug,
     }))
   )
 }
 
-export function generateMetadata({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+export async function generateMetadata({ params }) {
+  const { slug, locale } = await params
+  let post = getBlogPosts(locale).find((post) => post.slug === slug)
   if (!post) {
     return
   }
@@ -55,8 +55,9 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function Blog({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+export default async function Blog({ params }) {
+  const { slug, locale } = await params
+  let post = getBlogPosts(locale).find((post) => post.slug === slug)
 
   if (!post) {
     notFound()
@@ -78,7 +79,7 @@ export default function Blog({ params }) {
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
+            url: `${baseUrl}/${locale}/blog/${post.slug}`,
             author: {
               '@type': 'Person',
               name: 'My Portfolio',

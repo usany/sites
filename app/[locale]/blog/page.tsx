@@ -5,11 +5,12 @@ export const metadata = {
   description: 'Read my blog.',
 }
 
-export default function Page() {
+export default async function Page({ params }) {
+  const { locale } = await params
   return (
     <section>
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Blog</h1>
-      <BlogPosts />
+      <BlogPosts locale={locale} />
     </section>
   )
 }
