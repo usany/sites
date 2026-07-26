@@ -12,7 +12,7 @@ const projects: Project[] = [
   {
     id: 'project-1',
     title: 'KHUSAN-쿠우산',
-    description: 'KHU umbrella sharing SNS',
+    description: 'KHU umbrella sharing platform',
     tags: ['Next.js', 'React', 'TypeScript'],
     link: 'https://khusan.co.kr',
     github: 'https://github.com',
