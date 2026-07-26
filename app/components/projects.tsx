@@ -2,6 +2,7 @@ interface Project {
   id: string;
   title: string;
   description: string;
+  subdescription?: string;
   tags: string[];
   link?: string;
   github?: string;
@@ -34,8 +35,9 @@ const projects: Project[] = [
   },
   {
     id: 'project-4',
-    title: 'Reinventing the Wheels Code Name -바퀴의 재발명',
-    description: 'Project Reinventing the Wheels. There are many screen capture SaaS. However this one is mine.',
+    title: 'Screenshots Capture - 스크린샷 캡처',
+    description: 'Project Reinventing the Wheels',
+    subdescription: 'There are many screen capture SaaS. However this one is mine.',
     tags: ['Next.js', 'React', 'TypeScript'],
     link: 'https://admin.khusan.co.kr',
     github: 'https://github.com',
@@ -57,6 +59,11 @@ export function Projects() {
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
               {project.description}
             </p>
+            {project.subdescription && (
+              <p className="text-neutral-500 dark:text-neutral-500 text-sm leading-relaxed mt-2">
+                {project.subdescription}
+              </p>
+            )}
           </div>
 
           <div className="flex flex-wrap gap-2 mb-4">
