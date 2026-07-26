@@ -16,8 +16,8 @@ const projects: Project[] = [
     description: 'KHU umbrella sharing platform',
     tags: ['Next.js', 'React', 'TypeScript'],
     link: 'https://khusan.co.kr',
+    document: 'https://begin.khusan.co.kr',
     github: 'https://github.com',
-    document: 'https://khusan.co.kr',
   },
   {
     id: 'project-2',
