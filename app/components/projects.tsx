@@ -48,7 +48,7 @@ const projects: Project[] = [
     title: 'KHUKIE-쿠우키',
     description: {
       en: 'KHU restaurant information service',
-      ko: 'KHU 학식 정보 서비스',
+      ko: 'KHU 메뉴 정보 서비스',
     },
     tags: ['Design System', 'Component Library', 'Storybook'],
     link: 'https://cookie.khusan.co.kr',
@@ -59,7 +59,7 @@ const projects: Project[] = [
     title: 'Screenshots Capture-스크린샷 캡처',
     description: {
       en: 'Project Reinventing the Wheels. Code Name: Cinnamon',
-      ko: '바퀴를 재발명하는 프로젝트. 코드명: 시나몬',
+      ko: '프로젝트 바퀴의 재발명. 코드명: Cinnamon',
     },
     subdescription: {
       en: 'There are many screen capture SaaS. However this one is mine.',
