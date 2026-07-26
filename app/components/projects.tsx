@@ -56,6 +56,17 @@ const projects: Project[] = [
   },
   {
     id: 'project-4',
+    title: 'KHUSAN Guides-쿠우산 가이드',
+    description: {
+      en: 'KHUSAN guide documentation',
+      ko: '쿠우산 가이드 문서',
+    },
+    tags: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://begin.khusan.co.kr',
+    github: 'https://github.com',
+  },
+  {
+    id: 'project-5',
     title: 'Screenshots Capture-스크린샷 캡처',
     description: {
       en: 'Project Reinventing the Wheels [Code Name: Cinnamon]',
