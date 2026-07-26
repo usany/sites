@@ -6,6 +6,7 @@ interface Project {
   tags: string[];
   link?: string;
   github?: string;
+  document?: string;
 }
 
 const projects: Project[] = [
@@ -16,6 +17,7 @@ const projects: Project[] = [
     tags: ['Next.js', 'React', 'TypeScript'],
     link: 'https://khusan.co.kr',
     github: 'https://github.com',
+    document: 'https://khusan.co.kr',
   },
   {
     id: 'project-2',
@@ -97,6 +99,17 @@ export function Projects() {
                 className="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link"
               >
                 <span>GitHub</span>
+                <span className="ml-1 transform group-hover/link:translate-x-1 transition-transform">→</span>
+              </a>
+            )}
+            {project.document && (
+              <a
+                href={project.document}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link"
+              >
+                <span>Document</span>
                 <span className="ml-1 transform group-hover/link:translate-x-1 transition-transform">→</span>
               </a>
             )}
