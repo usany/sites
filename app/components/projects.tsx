@@ -58,8 +58,8 @@ const projects: Project[] = [
     id: 'project-4',
     title: 'Screenshots Capture-스크린샷 캡처',
     description: {
-      en: 'Project Reinventing the Wheels. Code Name: Cinnamon',
-      ko: '프로젝트 바퀴의 재발명. 코드명: Cinnamon',
+      en: 'Project Reinventing the Wheels [Code Name: Cinnamon]',
+      ko: '프로젝트 바퀴의 재발명 [코드명: Cinnamon]',
     },
     subdescription: {
       en: 'There are many screen capture SaaS. However this one is mine.',
