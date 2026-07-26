@@ -37,7 +37,7 @@ const projects: Project[] = [
   },
   {
     id: 'project-4',
-    title: 'Screenshots Capture - 스크린샷 캡처',
+    title: 'Screenshots Capture-스크린샷 캡처',
     description: 'Project Reinventing the Wheels. Code Name: Cinnamon',
     subdescription: 'There are many screen capture SaaS. However this one is mine.',
     tags: ['Next.js', 'React', 'TypeScript'],
