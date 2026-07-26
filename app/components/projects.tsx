@@ -1,8 +1,18 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+
+interface LocalizedText {
+  en: string;
+  ko: string;
+}
+
 interface Project {
   id: string;
   title: string;
-  description: string;
-  subdescription?: string;
+  description: LocalizedText;
+  subdescription?: LocalizedText;
   tags: string[];
   link?: string;
   github?: string;
@@ -13,7 +23,10 @@ const projects: Project[] = [
   {
     id: 'project-1',
     title: 'KHUSAN-쿠우산',
-    description: 'KHU umbrella sharing platform',
+    description: {
+      en: 'KHU umbrella sharing platform',
+      ko: 'KHU 우산 공유 플랫폼',
+    },
     tags: ['Next.js', 'React', 'TypeScript'],
     link: 'https://khusan.co.kr',
     document: 'https://begin.khusan.co.kr',
@@ -22,7 +35,10 @@ const projects: Project[] = [
   {
     id: 'project-2',
     title: 'KHUBUS-쿠우버스',
-    description: 'KHU bus arrival information service',
+    description: {
+      en: 'KHU bus arrival information service',
+      ko: 'KHU 버스 도착 정보 서비스',
+    },
     tags: ['Node.js', 'MongoDB', 'React'],
     link: 'https://bus.khusan.co.kr',
     github: 'https://github.com',
@@ -30,7 +46,10 @@ const projects: Project[] = [
   {
     id: 'project-3',
     title: 'KHUKIE-쿠우키',
-    description: 'KHU restaurant information service',
+    description: {
+      en: 'KHU restaurant information service',
+      ko: 'KHU 학식 정보 서비스',
+    },
     tags: ['Design System', 'Component Library', 'Storybook'],
     link: 'https://cookie.khusan.co.kr',
     github: 'https://github.com',
@@ -38,8 +57,14 @@ const projects: Project[] = [
   {
     id: 'project-4',
     title: 'Screenshots Capture-스크린샷 캡처',
-    description: 'Project Reinventing the Wheels. Code Name: Cinnamon',
-    subdescription: 'There are many screen capture SaaS. However this one is mine.',
+    description: {
+      en: 'Project Reinventing the Wheels. Code Name: Cinnamon',
+      ko: '바퀴를 재발명하는 프로젝트. 코드명: 시나몬',
+    },
+    subdescription: {
+      en: 'There are many screen capture SaaS. However this one is mine.',
+      ko: '많은 스크린샷 캡처 SaaS가 있습니다. 하지만 이것은 제 것입니다.',
+    },
     tags: ['Next.js', 'React', 'TypeScript'],
     link: 'https://admin.khusan.co.kr',
     github: 'https://github.com',
@@ -47,6 +72,25 @@ const projects: Project[] = [
 ];
 
 export function Projects() {
+  const [language, setLanguage] = useState<'en' | 'ko'>('en');
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const pathLang = pathname.split('/')[1];
+    if (pathLang === 'en' || pathLang === 'ko') {
+      setLanguage(pathLang);
+    } else {
+      try {
+        const stored = localStorage.getItem('language');
+        if (stored === 'en' || stored === 'ko') {
+          setLanguage(stored);
+        }
+      } catch {
+        // localStorage unavailable
+      }
+    }
+  }, [pathname]);
+
   return (
     <div className="grid gap-6">
       {projects.map((project) => (
@@ -59,11 +103,11 @@ export function Projects() {
               {project.title}
             </h3>
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
-              {project.description}
+              {project.description[language]}
             </p>
             {project.subdescription && (
               <p className="text-neutral-500 dark:text-neutral-500 text-sm leading-relaxed mt-2">
-                {project.subdescription}
+                {project.subdescription[language]}
               </p>
             )}
           </div>
