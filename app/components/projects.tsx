@@ -10,27 +10,26 @@ interface Project {
 const projects: Project[] = [
   {
     id: 'project-1',
-    title: 'Project One',
-    description: 'A modern web application built with Next.js and React.',
+    title: 'KHUSAN-쿠우산',
+    description: 'KHU umbrella sharing SNS',
     tags: ['Next.js', 'React', 'TypeScript'],
-    link: 'https://example.com',
+    link: 'https://khusan.co.kr',
     github: 'https://github.com',
   },
   {
     id: 'project-2',
-    title: 'Project Two',
-    description: 'Full-stack application with API and database integration.',
+    title: 'KHUBUS-쿠우버스',
+    description: 'KHU bus arrival information service',
     tags: ['Node.js', 'MongoDB', 'React'],
-    link: 'https://example.com',
+    link: 'https://bus.khusan.co.kr',
     github: 'https://github.com',
   },
   {
     id: 'project-3',
-    title: 'Project Three',
-    description:
-      'Design system and component library for enterprise applications.',
+    title: 'KHUKIE-쿠우키',
+    description: 'KHU restaurant information service',
     tags: ['Design System', 'Component Library', 'Storybook'],
-    link: 'https://example.com',
+    link: 'https://cookie.khusan.co.kr',
     github: 'https://github.com',
   },
 ];
