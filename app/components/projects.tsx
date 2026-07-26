@@ -32,6 +32,14 @@ const projects: Project[] = [
     link: 'https://cookie.khusan.co.kr',
     github: 'https://github.com',
   },
+  {
+    id: 'project-4',
+    title: 'Reinventing the Wheels Code Name -바퀴의 재발명',
+    description: 'Project Reinventing the Wheels. There are many screen capture SaaS. However this one is mine.',
+    tags: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://admin.khusan.co.kr',
+    github: 'https://github.com',
+  }
 ];
 
 export function Projects() {
