@@ -1,7 +1,4 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { getPreferredLanguage } from '@/lib/language';
 
 interface LocalizedText {
   en: string;
@@ -82,25 +79,8 @@ const projects: Project[] = [
   }
 ];
 
-export function Projects() {
-  const [language, setLanguage] = useState<'en' | 'ko'>('en');
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const pathLang = pathname.split('/')[1];
-    if (pathLang === 'en' || pathLang === 'ko') {
-      setLanguage(pathLang);
-    } else {
-      try {
-        const stored = localStorage.getItem('language');
-        if (stored === 'en' || stored === 'ko') {
-          setLanguage(stored);
-        }
-      } catch {
-        // localStorage unavailable
-      }
-    }
-  }, [pathname]);
+export async function Projects() {
+  const language = (await getPreferredLanguage()) as 'en' | 'ko';
 
   return (
     <div className="grid gap-6">
