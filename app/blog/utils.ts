@@ -49,7 +49,7 @@ function getMDXData(dir) {
   })
 }
 
-export function getBlogPosts() {
+export function getBlogPosts(locale?: string) {
   const postsDir = path.join(process.cwd(), 'app', 'blog', 'posts')
   return getMDXData(postsDir)
 }
