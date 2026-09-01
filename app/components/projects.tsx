@@ -51,6 +51,39 @@ const projects: Project[] = [
   },
   {
     id: 'project-4',
+    title: 'KHU Exchange Student Info-KHU 교환학생 정보',
+    description: {
+      en: 'KHU exchange student information',
+      ko: 'KHU 교환학생 정보',
+    },
+    tags: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://soil.khusan.co.kr',
+    github: 'https://github.com',
+  },
+  {
+    id: 'project-5',
+    title: 'KHU News Podcast-KHU 뉴스 팟캐스트',
+    description: {
+      en: 'KHU news podcast',
+      ko: 'KHU 뉴스 팟캐스트',
+    },
+    tags: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://news.khusan.co.kr',
+    github: 'https://github.com',
+  },
+  {
+    id: 'project-6',
+    title: 'KHUSAN Rabbit and Tortoise-쿠우산 토끼와 거북이',
+    description: {
+      en: 'KHUSAN Rabbit and Tortoise',
+      ko: '쿠우산 토끼와 거북이',
+    },
+    tags: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://folk.khusan.co.kr',
+    github: 'https://github.com',
+  },
+  {
+    id: 'project-7',
     title: 'KHUSAN Guides-쿠우산 가이드',
     description: {
       en: 'KHUSAN guide documentation',
@@ -61,7 +94,7 @@ const projects: Project[] = [
     github: 'https://github.com',
   },
   {
-    id: 'project-5',
+    id: 'project-8',
     title: 'Screenshots Capture-스크린샷 캡처',
     description: {
       en: 'Project Reinventing the Wheels [Code Name: Cinnamon]',
@@ -70,6 +103,21 @@ const projects: Project[] = [
     subdescription: {
       en: 'There are many screen capture SaaS. However this one is mine.',
       ko: '많은 스크린샷 캡처 SaaS가 있습니다. 하지만 이것은 제 것입니다.',
+    },
+    tags: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://admin.khusan.co.kr',
+    github: 'https://github.com',
+  },
+  {
+    id: 'project-9',
+    title: 'Merge Markdown to PDF-마크다운을 PDF로 합치기',
+    description: {
+      en: 'Merge multiple markdown files into one PDF file.',
+      ko: '마크다운 파일을 하나로 합치기.',
+    },
+    subdescription: {
+      en: 'There are many screen capture SaaS. However this one is mine.',
+      ko: '많은 PDF 병합 웹 서비스가 있습니다. 하지만 이것은 제 것입니다.',
     },
     tags: ['Next.js', 'React', 'TypeScript'],
     link: 'https://admin.khusan.co.kr',
