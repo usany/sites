@@ -1,4 +1,4 @@
-import { getPreferredLanguage } from '@/lib/language';
+import { getPreferredLanguage } from "@/lib/language";
 
 interface LocalizedText {
   en: string;
@@ -17,116 +17,116 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 'project-1',
-    title: 'KHUSAN-쿠우산',
+    id: "project-1",
+    title: "KHUSAN-쿠우산",
     description: {
-      en: 'KHU umbrella sharing platform',
-      ko: 'KHU 우산 공유 플랫폼',
+      en: "KHU umbrella sharing platform",
+      ko: "KHU 우산 공유 플랫폼",
     },
-    tags: ['Next.js', 'React', 'TypeScript'],
-    link: 'https://khusan.co.kr',
-    github: 'https://github.com',
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://khusan.co.kr",
+    github: "https://github.com",
   },
   {
-    id: 'project-2',
-    title: 'KHUBUS-쿠우버스',
+    id: "project-2",
+    title: "KHUBUS-쿠우버스",
     description: {
-      en: 'KHU bus arrival information service',
-      ko: 'KHU 버스 도착 정보 서비스',
+      en: "KHU bus arrival information service",
+      ko: "KHU 버스 도착 정보 서비스",
     },
-    tags: ['Node.js', 'MongoDB', 'React'],
-    link: 'https://bus.khusan.co.kr',
-    github: 'https://github.com',
+    tags: ["Node.js", "MongoDB", "React"],
+    link: "https://bus.khusan.co.kr",
+    github: "https://github.com",
   },
   {
-    id: 'project-3',
-    title: 'KHUKIE-쿠우키',
+    id: "project-3",
+    title: "KHUKIE-쿠우키",
     description: {
-      en: 'KHU restaurant information service',
-      ko: 'KHU 메뉴 정보 서비스',
+      en: "KHU restaurant information service",
+      ko: "KHU 메뉴 정보 서비스",
     },
-    tags: ['Design System', 'Component Library', 'Storybook'],
-    link: 'https://cookie.khusan.co.kr',
-    github: 'https://github.com',
+    tags: ["Design System", "Component Library", "Storybook"],
+    link: "https://cookie.khusan.co.kr",
+    github: "https://github.com",
   },
   {
-    id: 'project-4',
-    title: 'KHU Exchange Student Info-KHU 교환학생 정보',
+    id: "project-4",
+    title: "KHU Exchange Student Info-KHU 교환학생 정보",
     description: {
-      en: 'KHU exchange student information',
-      ko: 'KHU 교환학생 정보',
+      en: "KHU exchange student information",
+      ko: "KHU 교환학생 정보",
     },
-    tags: ['Next.js', 'React', 'TypeScript'],
-    link: 'https://soil.khusan.co.kr',
-    github: 'https://github.com',
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://soil.khusan.co.kr",
+    github: "https://github.com",
   },
   {
-    id: 'project-5',
-    title: 'KHU News Podcast-KHU 뉴스 팟캐스트',
+    id: "project-5",
+    title: "KHU News Podcast-KHU 뉴스 팟캐스트",
     description: {
-      en: 'KHU news podcast',
-      ko: 'KHU 뉴스 팟캐스트',
+      en: "KHU news podcast",
+      ko: "KHU 뉴스 팟캐스트",
     },
-    tags: ['Next.js', 'React', 'TypeScript'],
-    link: 'https://news.khusan.co.kr',
-    github: 'https://github.com',
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://news.khusan.co.kr",
+    github: "https://github.com",
   },
   {
-    id: 'project-6',
-    title: 'KHUSAN Rabbit and Tortoise-쿠우산 토끼와 거북이',
+    id: "project-6",
+    title: "KHUSAN Rabbit and Tortoise-쿠우산 토끼와 거북이",
     description: {
-      en: 'KHUSAN Rabbit and Tortoise',
-      ko: '쿠우산 토끼와 거북이',
+      en: "KHUSAN Rabbit and Tortoise",
+      ko: "쿠우산 토끼와 거북이",
     },
-    tags: ['Next.js', 'React', 'TypeScript'],
-    link: 'https://folk.khusan.co.kr',
-    github: 'https://github.com',
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://folk.khusan.co.kr",
+    github: "https://github.com",
   },
   {
-    id: 'project-7',
-    title: 'KHUSAN Guides-쿠우산 가이드',
+    id: "project-7",
+    title: "KHUSAN Guides-쿠우산 가이드",
     description: {
-      en: 'KHUSAN guide documentation',
-      ko: '쿠우산 가이드 문서',
+      en: "KHUSAN guide documentation",
+      ko: "쿠우산 가이드 문서",
     },
-    tags: ['Next.js', 'React', 'TypeScript'],
-    link: 'https://begin.khusan.co.kr',
-    github: 'https://github.com',
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://begin.khusan.co.kr",
+    github: "https://github.com",
   },
   {
-    id: 'project-8',
-    title: 'Screenshots Capture-스크린샷 캡처',
+    id: "project-8",
+    title: "Screenshots Capture-스크린샷 캡처",
     description: {
-      en: 'Project Reinventing the Wheels [Code Name: Cinnamon]',
-      ko: '프로젝트 바퀴의 재발명 [코드명: Cinnamon]',
+      en: "Project Reinventing the Wheels [Code Name: Cinnamon]",
+      ko: "프로젝트 바퀴의 재발명 [코드명: Cinnamon]",
     },
     subdescription: {
-      en: 'There are many screen capture SaaS. However this one is mine.',
-      ko: '많은 스크린샷 캡처 SaaS가 있습니다. 하지만 이것은 제 것입니다.',
+      en: "There are many screen capture SaaS. However this one is mine.",
+      ko: "많은 스크린샷 캡처 SaaS가 있습니다. 하지만 이것은 제 것입니다.",
     },
-    tags: ['Next.js', 'React', 'TypeScript'],
-    link: 'https://admin.khusan.co.kr',
-    github: 'https://github.com',
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://capturescreen.khusan.co.kr",
+    github: "https://github.com",
   },
   {
-    id: 'project-9',
-    title: 'Merge Markdown to PDF-마크다운을 PDF로 합치기',
+    id: "project-9",
+    title: "Merge Markdown to PDF-마크다운을 PDF로 합치기",
     description: {
-      en: 'Merge multiple markdown files into one PDF file.',
-      ko: '마크다운 파일을 하나로 합치기.',
+      en: "Merge multiple markdown files into one PDF file.",
+      ko: "마크다운 파일을 하나로 합치기.",
     },
     subdescription: {
-      en: 'There are many screen capture SaaS. However this one is mine.',
-      ko: '많은 PDF 병합 웹 서비스가 있습니다. 하지만 이것은 제 것입니다.',
+      en: "There are many screen capture SaaS. However this one is mine.",
+      ko: "많은 PDF 병합 웹 서비스가 있습니다. 하지만 이것은 제 것입니다.",
     },
-    tags: ['Next.js', 'React', 'TypeScript'],
-    link: 'https://admin.khusan.co.kr',
-    github: 'https://github.com',
-  }
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://convertscreen.khusan.co.kr",
+    github: "https://github.com",
+  },
 ];
 
 export async function Projects() {
-  const language = (await getPreferredLanguage()) as 'en' | 'ko';
+  const language = (await getPreferredLanguage()) as "en" | "ko";
 
   return (
     <div className="grid gap-6">
@@ -169,7 +169,9 @@ export async function Projects() {
                 className="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link"
               >
                 <span>Visit</span>
-                <span className="ml-1 transform group-hover/link:translate-x-1 transition-transform">→</span>
+                <span className="ml-1 transform group-hover/link:translate-x-1 transition-transform">
+                  →
+                </span>
               </a>
             )}
             {project.github && (
@@ -180,7 +182,9 @@ export async function Projects() {
                 className="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group/link"
               >
                 <span>GitHub</span>
-                <span className="ml-1 transform group-hover/link:translate-x-1 transition-transform">→</span>
+                <span className="ml-1 transform group-hover/link:translate-x-1 transition-transform">
+                  →
+                </span>
               </a>
             )}
           </div>
