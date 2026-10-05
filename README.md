@@ -40,3 +40,13 @@ pnpm dev
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+
+### Deploy
+This post site and reinvented wheels are deployed to OCI.
+
+* post: https://sites-livid.vercel.app
+* capturescreen: https://capturescreen.khusan.co.kr/
+* convertscreen: https://convertscreen.khusan.co.kr/
+* urlqrcode: repo/newpage
+* resizescreen:
+* pdfwriter:
