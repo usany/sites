@@ -84,6 +84,17 @@ const projects: Project[] = [
   },
   {
     id: "project-7",
+    title: "KHUSAN Oversea Jobs Agent-쿠우산 해외 직업 에이전트",
+    description: {
+      en: "KHUSAN Oversea Jobs Agent",
+      ko: "쿠우산 해외 직업 에이전트",
+    },
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://begin.khusan.co.kr",
+    github: "https://github.com",
+  },
+  {
+    id: "project-8",
     title: "KHUSAN Guides-쿠우산 가이드",
     description: {
       en: "KHUSAN guide documentation",
@@ -94,7 +105,7 @@ const projects: Project[] = [
     github: "https://github.com",
   },
   {
-    id: "project-8",
+    id: "project-9",
     title: "Screenshots Capture-스크린샷 캡처",
     description: {
       en: "Project Reinventing the Wheels [Code Name: Cinnamon]",
@@ -109,7 +120,7 @@ const projects: Project[] = [
     github: "https://github.com",
   },
   {
-    id: "project-9",
+    id: "project-10",
     title: "Merge Markdown to PDF-마크다운을 PDF로 합치기",
     description: {
       en: "Merge multiple markdown files into one PDF file.",
@@ -118,6 +129,36 @@ const projects: Project[] = [
     subdescription: {
       en: "There are many screen capture SaaS. However this one is mine.",
       ko: "많은 PDF 병합 웹 서비스가 있습니다. 하지만 이것은 제 것입니다.",
+    },
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://convertscreen.khusan.co.kr",
+    github: "https://github.com",
+  },
+  {
+    id: "project-11",
+    title: "QR Code maker-QR 코드 생성기",
+    description: {
+      en: "Make a QR code for URL.",
+      ko: "URL에 대한 QR 코드를 생성합니다.",
+    },
+    subdescription: {
+      en: "There are many QR code maker SaaS. However this one is mine.",
+      ko: "많은 QR 코드 생성 웹 서비스가 있습니다. 하지만 이것은 제 것입니다.",
+    },
+    tags: ["Next.js", "React", "TypeScript"],
+    link: "https://convertscreen.khusan.co.kr",
+    github: "https://github.com",
+  },
+  {
+    id: "project-12",
+    title: "Image Resizer-이미지 크기 조절기",
+    description: {
+      en: "Resize images.",
+      ko: "이미지 크기를 조절합니다.",
+    },
+    subdescription: {
+      en: "There are many image resizer SaaS. However this one is mine.",
+      ko: "많은 이미지 크기 조절 웹 서비스가 있습니다. 하지만 이것은 제 것입니다.",
     },
     tags: ["Next.js", "React", "TypeScript"],
     link: "https://convertscreen.khusan.co.kr",
