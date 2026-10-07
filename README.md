@@ -42,6 +42,54 @@ pnpm dev
 Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
 
 ### Deploy
+KHUSAN
+- khusan.co.kr Firebase Hosting
+- express-d1-app.ckd-qja.workers.dev CloudFlare Workers
+- servicedeno.onrender.com Render
+
+KHUBUS
+- bus.khusan.co.kr Vercel
+- routes-xlbe.vercel.app Vercel
+
+KHUKIE
+- cookie.khusan.co.kr Vercel
+- Python Cron Actions
+
+KHUSAN Docs
+- begin.khusan.co.kr Vercel
+- express-d1-app.ckd-qja.workers.dev CloudFlare Workers
+
+Exchange Student
+- soil.khusan.co.kr Vercel
+- Django Vercel
+- Node.js Cron Actions
+
+Radio News
+- news.khusan.co.kr Vercel
+- Nest Vercel
+- Node.js+Python Cron Actions
+
+Fairytale
+- folk.khusan.co.kr Vercel
+
+Door
+- door.khusan.co.kr Vercel
+
+Capturescreen
+- capturescreen.khusan.co.kr Render
+
+Convertscreen
+- convertscreen.khusan.co.kr Vercel
+
+Qrcode
+- repo/newpage
+
+Resizer
+- repo/resizer
+
+Pdfwriter
+- 
+
 This post site and reinvented wheels are deployed to OCI.
 
 * post: https://sites-livid.vercel.app
