@@ -1,7 +1,7 @@
 export default function (plop) {
   const transformName = (str) => {
-    return str.toLowerCase().replace(/ /g, '-')
-  }
+    return str.toLowerCase().replace(/ /g, '-');
+  };
 
   // create your generators here
   plop.setGenerator('example', {
@@ -27,8 +27,8 @@ export default function (plop) {
       },
     ],
     actions: (data) => {
-      const plopExampleName = transformName(data.name)
-      const plopPath = `${data.exampleScopeFolder}/${plopExampleName}`
+      const plopExampleName = transformName(data.name);
+      const plopPath = `${data.exampleScopeFolder}/${plopExampleName}`;
 
       const filesToAlwaysCopyOver = [
         'README.md',
@@ -44,8 +44,8 @@ export default function (plop) {
         'public/favicon.ico',
         'turbo.json',
         'vercel.json',
-      ]
-      const actions = []
+      ];
+      const actions = [];
 
       // Copy over basic files
       filesToAlwaysCopyOver.forEach((file) => {
@@ -53,8 +53,8 @@ export default function (plop) {
           type: 'add',
           path: `{{exampleScopeFolder}}/${plopExampleName}/${file}`,
           templateFile: `plop-templates/example/${file}`,
-        })
-      })
+        });
+      });
 
       // modify app/layout.tsx
       actions.push({
@@ -62,13 +62,13 @@ export default function (plop) {
         path: `{{exampleScopeFolder}}/${plopExampleName}/app/layout.tsx`,
         pattern: /(-- PLOP PATH HERE --)/gi,
         template: `${plopPath}`,
-      })
+      });
       actions.push({
         type: 'modify',
         path: `{{exampleScopeFolder}}/${plopExampleName}/app/layout.tsx`,
         pattern: /(-- PLOP TITLE HERE --)/gi,
         template: `${data.name}`,
-      })
+      });
 
       return [
         ...actions,
@@ -104,7 +104,7 @@ export default function (plop) {
           pattern: /(-- PLOP TITLE HERE --)/gi,
           template: `${data.name}`,
         },
-      ]
+      ];
     },
-  })
+  });
 }

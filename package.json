@@ -3,7 +3,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write ."
   },
   "dependencies": {
     "@types/node": "20.11.17",
@@ -23,6 +27,7 @@
     "typescript": "^5"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.15",
     "@unocss/postcss": "^66.7.5",
     "@unocss/reset": "^66.7.5",
     "unocss": "^66.7.5"

@@ -1,30 +1,27 @@
-import "../global.css";
-import type { Metadata } from "next";
-import Script from "next/script";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import { Great_Vibes } from "next/font/google";
-import { ThemeProvider } from "next-themes";
-import { Navbar } from "../components/nav";
-import Footer from "../components/footer";
-import { baseUrl } from "../sitemap";
-
-const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"] });
+import '../global.css';
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import { ThemeProvider } from 'next-themes';
+import Footer from '../components/footer';
+import { Navbar } from '../components/nav';
+import { baseUrl } from '../sitemap';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Next.js Portfolio Starter",
-    template: "%s | Next.js Portfolio Starter",
+    default: 'Next.js Portfolio Starter',
+    template: '%s | Next.js Portfolio Starter',
   },
-  description: "This is my portfolio.",
+  description: 'This is my portfolio.',
   openGraph: {
-    title: "My Portfolio",
-    description: "This is my portfolio.",
+    title: 'My Portfolio',
+    description: 'This is my portfolio.',
     url: baseUrl,
-    siteName: "My Portfolio",
-    locale: "en_US",
-    type: "website",
+    siteName: 'My Portfolio',
+    locale: 'en_US',
+    type: 'website',
   },
   robots: {
     index: true,
@@ -32,17 +29,17 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(" ");
+const cx = (...classes) => classes.filter(Boolean).join(' ');
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "ko" }];
+  return [{ locale: 'en' }, { locale: 'ko' }];
 }
 
 export default async function RootLayout({
@@ -56,16 +53,14 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={cx(
-        GeistSans.variable,
-        GeistMono.variable,
-      )}
+      className={cx(GeistSans.variable, GeistMono.variable)}
       suppressHydrationWarning
     >
       <head>
         <Script
           id="theme-script"
           strategy="beforeInteractive"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static inline script for flash-free theme detection
           dangerouslySetInnerHTML={{
             __html: `
               (function() {

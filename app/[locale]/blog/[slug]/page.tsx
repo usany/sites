@@ -1,35 +1,28 @@
-import { notFound } from 'next/navigation'
-import { CustomMDX } from '../../../components/mdx'
-import { formatDate, getBlogPosts } from '@/blog/utils'
-import { baseUrl } from '@/sitemap'
+import { notFound } from 'next/navigation';
+import { formatDate, getBlogPosts } from '@/blog/utils';
+import { baseUrl } from '@/sitemap';
+import { CustomMDX } from '../../../components/mdx';
 
 export async function generateStaticParams() {
-  const locales = ['en', 'ko']
+  const locales = ['en', 'ko'];
 
   return locales.flatMap((locale) =>
     getBlogPosts(locale).map((post) => ({
       locale,
       slug: post.slug,
-    }))
-  )
+    })),
+  );
 }
 
 export async function generateMetadata({ params }) {
-  const { slug, locale } = await params
-  let post = getBlogPosts(locale).find((post) => post.slug === slug)
+  const { slug, locale } = await params;
+  const post = getBlogPosts(locale).find((post) => post.slug === slug);
   if (!post) {
-    return
+    return;
   }
 
-  let {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata
-  let ogImage = image
-    ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+  const { title, publishedAt: publishedTime, summary: description, image } = post.metadata;
+  const ogImage = image ? image : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
@@ -52,22 +45,22 @@ export async function generateMetadata({ params }) {
       description,
       images: [ogImage],
     },
-  }
+  };
 }
 
 export default async function Blog({ params }) {
-  const { slug, locale } = await params
-  let post = getBlogPosts(locale).find((post) => post.slug === slug)
+  const { slug, locale } = await params;
+  const post = getBlogPosts(locale).find((post) => post.slug === slug);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
   return (
     <section>
       <script
         type="application/ld+json"
-        suppressHydrationWarning
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: structured data serialized from typed metadata
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
@@ -95,9 +88,7 @@ export default async function Blog({ params }) {
           ← Back to posts
         </a>
       </div>
-      <h1 className="title font-semibold text-2xl tracking-tighter">
-        {post.metadata.title}
-      </h1>
+      <h1 className="title font-semibold text-2xl tracking-tighter">{post.metadata.title}</h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.metadata.publishedAt)}
@@ -107,5 +98,5 @@ export default async function Blog({ params }) {
         <CustomMDX source={post.content} />
       </article>
     </section>
-  )
+  );
 }

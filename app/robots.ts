@@ -1,4 +1,4 @@
-import { baseUrl } from './sitemap'
+import { baseUrl } from './sitemap';
 
 export default function robots() {
   return {
@@ -8,5 +8,5 @@ export default function robots() {
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
-  }
+  };
 }

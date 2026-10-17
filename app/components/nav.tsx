@@ -1,23 +1,23 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { FiGithub, FiRss, FiMail } from "react-icons/fi";
-import { GitHubLink, MailLink } from "settings/navigation";
-import { ThemeDropdown } from "./theme-dropdown";
-import { LanguageDropdown } from "./language-dropdown";
+import Link from 'next/link';
+import { FiGithub, FiMail, FiRss } from 'react-icons/fi';
+import { GitHubLink, MailLink } from 'settings/navigation';
+import { LanguageDropdown } from './language-dropdown';
+import { ThemeDropdown } from './theme-dropdown';
 
 const navItems = {
   en: {
-    "/": { name: "home" },
-    "/blog": { name: "blog" },
+    '/': { name: 'home' },
+    '/blog': { name: 'blog' },
   },
   ko: {
-    "/": { name: "홈" },
-    "/blog": { name: "블로그" },
+    '/': { name: '홈' },
+    '/blog': { name: '블로그' },
   },
 };
 
-export function Navbar({ locale = "en" }: { locale?: string }) {
+export function Navbar({ locale = 'en' }: { locale?: string }) {
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
@@ -26,17 +26,19 @@ export function Navbar({ locale = "en" }: { locale?: string }) {
           id="nav"
         >
           <div className="flex flex-row space-x-0 pr-10">
-            {Object.entries(navItems[locale as keyof typeof navItems] || navItems.en).map(([path, { name }]) => {
-              return (
-                <Link
-                  key={path}
-                  href={`/${locale}${path === "/" ? "" : path}`}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
-                >
-                  {name}
-                </Link>
-              );
-            })}
+            {Object.entries(navItems[locale as keyof typeof navItems] || navItems.en).map(
+              ([path, { name }]) => {
+                return (
+                  <Link
+                    key={path}
+                    href={`/${locale}${path === '/' ? '' : path}`}
+                    className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
+                  >
+                    {name}
+                  </Link>
+                );
+              },
+            )}
           </div>
           <div className="flex flex-row items-center gap-2">
             {MailLink.href && (

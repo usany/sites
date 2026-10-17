@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { formatDate, getBlogPosts } from "app/blog/utils";
+import { formatDate, getBlogPosts } from 'app/blog/utils';
+import Link from 'next/link';
 
 export function BlogPosts({ locale }: { locale?: string }) {
-  let allBlogs = getBlogPosts(locale);
+  const allBlogs = getBlogPosts(locale);
   const resolvedLocale = locale;
 
   return (

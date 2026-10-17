@@ -5,8 +5,8 @@ export default function Footer() {
         className="text-neutral-600 dark:text-neutral-300"
         style={{
           fontFamily: '"Great Vibes", cursive',
-          fontSize: "2.5rem",
-          letterSpacing: "0.05em",
+          fontSize: '2.5rem',
+          letterSpacing: '0.05em',
         }}
       >
         cb ahn
