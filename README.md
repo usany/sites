@@ -90,6 +90,9 @@ Resizer
 Pdfwriter
 - 
 
+Pdfpageremover
+- 
+
 This post site and reinvented wheels are deployed to OCI.
 
 * post: https://sites-livid.vercel.app
@@ -98,3 +101,4 @@ This post site and reinvented wheels are deployed to OCI.
 * urlqrcode: repo/newpage
 * resizescreen:
 * pdfwriter:
+* pdfpageremover:
