@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: biome-check
+        name: biome check (staged)
+        entry: pnpm exec biome check --write --staged --no-errors-on-unmatched
+        language: system
+        files: \.(js|jsx|ts|tsx|mjs|cjs|json|css)$
+        pass_filenames: false
