@@ -8,7 +8,8 @@
     "format": "biome format --write .",
     "check": "biome check .",
     "check:fix": "biome check --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
     "@types/node": "20.11.17",
@@ -30,6 +31,7 @@
     "@biomejs/biome": "2.5.15",
     "@unocss/postcss": "^66.7.5",
     "@unocss/reset": "^66.7.5",
+    "husky": "^9.1.7",
     "typescript": "^5.9.3",
     "unocss": "^66.7.5"
   }
