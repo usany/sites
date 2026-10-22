@@ -50,9 +50,6 @@ importers:
       sugar-high:
         specifier: ^0.6.0
         version: 0.6.0
-      typescript:
-        specifier: ^5
-        version: 5.3.3
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.15
@@ -63,6 +60,9 @@ importers:
       '@unocss/reset':
         specifier: ^66.7.5
         version: 66.7.5
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
       unocss:
         specifier: ^66.7.5
         version: 66.7.5(@unocss/postcss@66.7.5(postcss@8.4.35))(vite@8.1.5(@types/node@20.11.17)(jiti@2.7.0)(yaml@2.8.3))
@@ -1439,8 +1439,8 @@ packages:
   type-level-regexp@0.1.17:
     resolution: {integrity: sha512-wTk4DH3cxwk196uGLK/E9pE45aLfeKJacKmcEgEOA/q5dnPGNxXt0cfYdFxb57L+sEpf1oJH4Dnx/pnRcku9jg==}
 
-  typescript@5.3.3:
-    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3092,7 +3092,7 @@ snapshots:
 
   type-level-regexp@0.1.17: {}
 
-  typescript@5.3.3: {}
+  typescript@5.9.3: {}
 
   ufo@1.6.4: {}
 
