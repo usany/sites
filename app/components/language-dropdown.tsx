@@ -63,7 +63,8 @@ export function LanguageDropdown() {
     }
 
     try {
-      // Save to cookie for server-side rendering
+      // Save to cookie for server-side rendering.
+      // biome-ignore lint/suspicious/noDocumentCookie: Browser still requires direct cookie assignment for broad compatibility (Cookie Store API is not yet universal).
       document.cookie = `language=${lang}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
     } catch {
       // Cookie setting unavailable

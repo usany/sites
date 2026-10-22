@@ -62,6 +62,15 @@ html {
   @apply visible;
 }
 
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .prose pre {
   @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
 }
@@ -119,17 +128,10 @@ html {
 
 .prose > :first-child {
   /* Override removing top margin, causing layout shift */
+  /* biome-ignore lint/complexity/noImportantStyles: Required to override Tailwind's prose margin reset and prevent layout shift. */
   margin-top: 1.25em !important;
+  /* biome-ignore lint/complexity/noImportantStyles: Required to override Tailwind's prose margin reset and prevent layout shift. */
   margin-bottom: 1.25em !important;
-}
-
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
 /* Remove Safari input shadow on mobile */

@@ -11,6 +11,7 @@ type Metadata = {
 function parseFrontmatter(fileContent: string) {
   const frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
   const match = frontmatterRegex.exec(fileContent);
+  // biome-ignore lint/style/noNonNullAssertion: MDX files are guaranteed to contain frontmatter delimited by ---.
   const frontMatterBlock = match![1];
   const content = fileContent.replace(frontmatterRegex, '').trim();
   const frontMatterLines = frontMatterBlock.trim().split('\n');
@@ -49,7 +50,7 @@ function getMDXData(dir) {
   });
 }
 
-export function getBlogPosts(locale?: string) {
+export function getBlogPosts(_locale?: string) {
   const postsDir = path.join(process.cwd(), 'app', 'blog', 'posts');
   return getMDXData(postsDir);
 }
