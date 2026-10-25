@@ -74,8 +74,8 @@ Radio News
 Fairytale Fable
 - folk.khusan.co.kr Vercel
 
-Door
-- door.khusan.co.kr Vercel
+Poster
+- poster.khusan.co.kr Vercel
 
 Capturescreen
 - capturescreen.khusan.co.kr Render
