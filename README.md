@@ -23,7 +23,9 @@ You can choose from one of the following two methods to use this repository:
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
+
 
 ### Clone and Deploy
 
@@ -55,7 +57,7 @@ KHUKIE
 - cookie.khusan.co.kr Vercel
 - Python Cron Actions
 
-KHUSAN Docs
+KHUSAN Press
 - begin.khusan.co.kr Vercel
 - express-d1-app.ckd-qja.workers.dev CloudFlare Workers
 
@@ -69,7 +71,7 @@ Radio News
 - Nest Vercel
 - Node.js+Python Cron Actions
 
-Fairytale
+Fairytale Fable
 - folk.khusan.co.kr Vercel
 
 Door
@@ -95,7 +97,7 @@ Pdfpageremover
 
 This post site and reinvented wheels are deployed to OCI.
 
-* post: https://sites-livid.vercel.app
+* post: https://poster.khusan.co.kr
 * capturescreen: https://capturescreen.khusan.co.kr/
 * convertscreen: https://convertscreen.khusan.co.kr/
 * urlqrcode: repo/newpage
