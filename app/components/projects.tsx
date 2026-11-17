@@ -95,6 +95,17 @@ const projects: Project[] = [
   },
   {
     id: 'project-8',
+    title: 'KHUSAN Pilot-쿠우산 Pilot',
+    description: {
+      en: 'KHUSAN guide documentation',
+      ko: '쿠우산 가이드 문서',
+    },
+    tags: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://begin.khusan.co.kr',
+    github: 'https://github.com',
+  },
+  {
+    id: 'project-9',
     title: 'Screenshots Capture-스크린샷 캡처',
     description: {
       en: 'Project Reinventing the Wheels [Code Name: Cinnamon]',
@@ -109,8 +120,23 @@ const projects: Project[] = [
     github: 'https://github.com',
   },
   {
-    id: 'project-9',
+    id: 'project-10',
     title: 'Merge Markdown to PDF-마크다운을 PDF로 합치기',
+    description: {
+      en: 'Merge multiple markdown files into one PDF file.',
+      ko: '마크다운 파일을 하나로 합치기.',
+    },
+    subdescription: {
+      en: 'There are many screen capture SaaS. However this one is mine.',
+      ko: '많은 PDF 병합 웹 서비스가 있습니다. 하지만 이것은 제 것입니다.',
+    },
+    tags: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://convertscreen.khusan.co.kr',
+    github: 'https://github.com',
+  },
+  {
+    id: 'project-11',
+    title: 'CLI tools',
     description: {
       en: 'Merge multiple markdown files into one PDF file.',
       ko: '마크다운 파일을 하나로 합치기.',
