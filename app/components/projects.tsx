@@ -138,12 +138,12 @@ const projects: Project[] = [
     id: 'project-11',
     title: 'CLI tools',
     description: {
-      en: 'Merge multiple markdown files into one PDF file.',
-      ko: '마크다운 파일을 하나로 합치기.',
+      en: 'dotenv variables management.',
+      ko: 'dotenv 변수 관리하기.',
     },
     subdescription: {
-      en: 'There are many screen capture SaaS. However this one is mine.',
-      ko: '많은 PDF 병합 웹 서비스가 있습니다. 하지만 이것은 제 것입니다.',
+      en: 'There are many dotenv variables management CLI tools. However this one is mine.',
+      ko: '많은 dotenv 변수 관리 CLI 도구가 있습니다. 하지만 이것은 제 것입니다.',
     },
     tags: ['Next.js', 'React', 'TypeScript'],
     link: 'https://convertscreen.khusan.co.kr',
