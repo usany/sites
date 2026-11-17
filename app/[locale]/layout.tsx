@@ -2,6 +2,7 @@ import '../global.css';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
+import { Great_Vibes } from 'next/font/google';
 import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 import Footer from '../components/footer';
@@ -36,6 +37,13 @@ export const metadata: Metadata = {
   },
 };
 
+const greatVibes = Great_Vibes({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-great-vibes',
+  display: 'swap',
+});
+
 const cx = (...classes) => classes.filter(Boolean).join(' ');
 
 export function generateStaticParams() {
@@ -53,7 +61,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={cx(GeistSans.variable, GeistMono.variable)}
+      className={cx(GeistSans.variable, GeistMono.variable, greatVibes.variable)}
       suppressHydrationWarning
     >
       <head>
