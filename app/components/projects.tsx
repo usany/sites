@@ -149,6 +149,21 @@ const projects: Project[] = [
     link: 'https://convertscreen.khusan.co.kr',
     github: 'https://github.com',
   },
+  {
+    id: 'project-12',
+    title: 'Color Picker',
+    description: {
+      en: 'Color Picker.',
+      ko: '색상 고르기',
+    },
+    subdescription: {
+      en: 'There are many color picker tools. However this one is mine.',
+      ko: '많은 색상 고르기 도구가 있습니다. 하지만 이것은 제 것입니다.',
+    },
+    tags: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://convertscreen.khusan.co.kr',
+    github: 'https://github.com',
+  },
 ];
 
 export async function Projects() {
