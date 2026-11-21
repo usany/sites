@@ -89,11 +89,19 @@ Qrcode
 Resizer
 - repo/resizer
 
+CLI envman
+- repo/variables
+
+Chat
+
 Pdfwriter
 - 
 
 Pdfpageremover
 - 
+
+Pickcolor
+-
 
 This post site and reinvented wheels are deployed to OCI.
 
