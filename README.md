@@ -77,6 +77,12 @@ Fairytale Fable
 Poster
 - poster.khusan.co.kr Vercel
 
+Pilot
+- repo/bot
+
+CLI envman
+- repo/variables
+
 Capturescreen
 - capturescreen.khusan.co.kr Render
 
@@ -84,23 +90,26 @@ Convertscreen
 - convertscreen.khusan.co.kr Vercel
 
 Qrcode
-- repo/newpage
+- made
 
 Resizer
 - repo/resizer
 
 Pdfwriter
-- 
+- needed
 
 Pdfpageremover
-- 
+- made
+
+PickColor
+- needed
 
 This post site and reinvented wheels are deployed to OCI.
 
 * post: https://poster.khusan.co.kr
 * capturescreen: https://capturescreen.khusan.co.kr/
 * convertscreen: https://convertscreen.khusan.co.kr/
-* urlqrcode: repo/newpage
+* urlqrcode: 
 * resizescreen:
 * pdfwriter:
 * pdfpageremover:
